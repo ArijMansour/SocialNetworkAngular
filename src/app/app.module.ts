@@ -16,6 +16,14 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { ChartsComponent } from './components/charts/charts.component';
 import { ChartsModule } from 'ng2-charts';
+import { ClubsComponent } from './components/clubs/clubs.component';
+import { AddClubComponent } from './components/add-club/add-club.component';
+import { ParentSpaceComponent } from './components/parent-space/parent-space.component';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import {ClubAddService} from './components/club-add.service';
+import { ShowClubsComponent } from './components/show-clubs/show-clubs.component';
+import { ModifyClubComponent } from './components/modify-club/modify-club.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +39,12 @@ import { ChartsModule } from 'ng2-charts';
     NotfoundComponent,
     StatsComponent,
     ChartsComponent,
-    
+    ClubsComponent,
+    AddClubComponent,
+    ParentSpaceComponent,
+    ShowClubsComponent,
+    ModifyClubComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -39,12 +52,11 @@ import { ChartsModule } from 'ng2-charts';
     NgbModule ,
     RouterModule,
     ChartsModule ,
-    RouterModule ,
-    ChartsModule 
-    
-
+    ChartsModule,
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [ClubAddService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,69 @@
+<div class="tabs-content" id="clubs">
+  <div class="container">
+    <div class="row">
+      <div class="wrapper">
+        <div class="col-md-4">
+          <div class="section-heading">
+            <div class="icon">
+              <img src="assets/img/kidsclub.png" alt="">
+            </div>
+            <h4>  Welcome  </h4>
+
+            <div class="line-dec"></div>
+            <p>To help children to integrate more socially and help them develop their skills while enjoying their time.</p>
+            <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+              <li><a class="active">Show All Clubs</a></li>
+              <li><a>search clubs </a></li>
+              <li><a>The most viewed clubs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <section id="first-tab-group" class="tabgroup">
+            <div>
+              <router-outlet></router-outlet>
+            </div>
+             <label>{{succesdelete}}</label>
+            <form>
+              <fieldset>
+                <legend class="text-center"><h1>show all clubs</h1><span class="req"><br><small>
+                                </small></span></legend>
+                <div id="brdr" *ngFor="let club of clubs">
+                  <div class="form-group">
+                    <h2> N°: {{club.club_Id}}</h2>
+
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <h2> Name: </h2><h3>{{club.club_Name}}</h3>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <h2>Type club: </h2><h3>{{club.club_type}}</h3>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <h2>Description: </h2><h3>{{club.club_Description}}</h3>
+                  </div>
+                  <br>
+                  <div >
+                    <button class="btn btn-danger btn-xs" (click)="supprimerClub(club.club_Id)">Delete</button>
+                    <button class="btn btn-link">Modifier</button>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                </div>
+
+
+              </fieldset>
+            </form><!-- ends ajoutercl form -->
+
+          </section>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
