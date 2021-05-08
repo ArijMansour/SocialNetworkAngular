@@ -16,9 +16,15 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { ChartsComponent } from './components/charts/charts.component';
 import { ChartsModule } from 'ng2-charts';
+
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { NbThemeModule, NbChatModule } from '@nebular/theme';
 import { FormsModule } from '@angular/forms';
+
+
+import { KinderOwnerSpaceComponent } from './kinder-owner-space/kinder-owner-space.component';
+import { ManagePostsComponent } from './manage-posts/manage-posts.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -36,7 +42,9 @@ import { FormsModule } from '@angular/forms';
     StatsComponent,
     ChartsComponent,
     ChatbotComponent,
-   
+    KinderOwnerSpaceComponent,
+    ManagePostsComponent,
+    
     
   ],
   imports: [
@@ -49,8 +57,10 @@ import { FormsModule } from '@angular/forms';
     ChartsModule ,
     NbThemeModule.forRoot(),
     NbChatModule ,
-    FormsModule 
-   
+    FormsModule ,
+    HttpClientModule
+    
+
 
   ],
   providers: [],

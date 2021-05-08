@@ -9,7 +9,12 @@ import { LoginComponent } from './components/login/login.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ChartsComponent } from './components/charts/charts.component';
+
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
+
+import { KinderOwnerSpaceComponent } from './kinder-owner-space/kinder-owner-space.component';
+import { ManagePostsComponent } from './manage-posts/manage-posts.component';
+
 
 const routes: Routes = [{path:'',component:HomeComponent} ,
 {path:'kindergardens',component:PortfolioComponent} ,
@@ -21,6 +26,10 @@ const routes: Routes = [{path:'',component:HomeComponent} ,
 
 }] } ,
 {path:'sign-in',component:LoginComponent} ,
+{path:'kindergartenOwner' , component: KinderOwnerSpaceComponent , children:[
+  {path:'managePosts' , component: ManagePostsComponent}
+  
+]},
 {path:'**',component:NotfoundComponent} 
 ];
 
