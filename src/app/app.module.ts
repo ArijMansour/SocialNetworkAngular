@@ -16,6 +16,10 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { ChartsComponent } from './components/charts/charts.component';
 import { ChartsModule } from 'ng2-charts';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
+import { NbThemeModule, NbChatModule } from '@nebular/theme';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +35,8 @@ import { ChartsModule } from 'ng2-charts';
     NotfoundComponent,
     StatsComponent,
     ChartsComponent,
+    ChatbotComponent,
+   
     
   ],
   imports: [
@@ -40,8 +46,11 @@ import { ChartsModule } from 'ng2-charts';
     RouterModule,
     ChartsModule ,
     RouterModule ,
-    ChartsModule 
-    
+    ChartsModule ,
+    NbThemeModule.forRoot(),
+    NbChatModule ,
+    FormsModule 
+   
 
   ],
   providers: [],
