@@ -21,47 +21,49 @@
         <div class="col-md-8">
           <section id="first-tab-group" class="tabgroup">
             <div>
+              <br>
+              <br>
               <router-outlet></router-outlet>
             </div>
              <label>{{succesdelete}}</label>
             <form>
               <fieldset>
-                <legend class="text-center"><h1>show all clubs</h1><span class="req"><br><small>
+                <legend class="text-center"><h3>home clubs</h3><span class="req"><br><small>
                                 </small></span></legend>
-                <div id="brdr" *ngFor="let club of clubs">
+                <div *ngFor="let club of clubs">
+                  <div id="brdr">
                   <div class="form-group">
-                    <h2> N°: {{club.club_Id}}</h2>
-
+                    <h4> N°: {{club.club_Id}}</h4>
                   </div>
                   <br>
                   <div class="form-group">
-                    <h2> Name: </h2><h3>{{club.club_Name}}</h3>
+                    <h4 id="loun_sous-titre"> Name: </h4><h4>{{club.club_Name}}</h4>
                   </div>
                   <br>
                   <div class="form-group">
-                    <h2>Type club: </h2><h3>{{club.club_type}}</h3>
+                    <h4 id="loun_sous-titre">Type club: </h4><h4>{{club.club_type}}</h4>
                   </div>
                   <br>
                   <div class="form-group">
-                    <h2>Description: </h2><h3>{{club.club_Description}}</h3>
+                    <h4 id="loun_sous-titre">Description: </h4><h4>{{club.club_Description}}</h4>
                   </div>
                   <br>
-                  <div >
+                  <div id="brdr">
                     <button class="btn btn-danger btn-xs" (click)="supprimerClub(club.club_Id)">Delete</button>
-                    <button class="btn btn-link">Modifier</button>
-                  </div>
-                  <br>
-                  <br>
+                    <button routerLink="modify_club" class="btn btn-danger btn-xs" >Delete</button>
+                </div>
+                </div>
                   <br>
                   <br>
                 </div>
 
-
               </fieldset>
             </form><!-- ends ajoutercl form -->
-
           </section>
+
+
         </div>
+
       </div>
 
     </div>

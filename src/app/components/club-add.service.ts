@@ -31,7 +31,7 @@ export class ClubAddService {
   }
 
   public domodifyClub(club: Club){
-    return this.http.put("",club,{responseType:'text' as 'json'});
+    return this.http.put("http://localhost:8081/SpringMVC/servlet/modify-club",club,{responseType:'text' as 'json'});
   }
 
 }

@@ -8,8 +8,7 @@ import {Club} from '../../club';
   styleUrls: ['./modify-club.component.css']
 })
 export class ModifyClubComponent implements OnInit {
-
-  club: Club = new Club("","","");
+  club: Club = new Club("","","","");
   message:any;
   constructor(private service:ClubAddService) { }
 

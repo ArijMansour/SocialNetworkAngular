@@ -10,10 +10,11 @@ import {Club} from '../../club';
 export class AddClubComponent implements OnInit {
 
 
-  club: Club = new Club("","","");
+  club: Club = new Club("","","","");
   isaddedclub: string="";
   message_n: string="";
   message:any;
+
   constructor(private service:ClubAddService) { }
 
   ngOnInit(): void {
@@ -25,7 +26,9 @@ export class AddClubComponent implements OnInit {
     this.isaddedclub= " is added with succes";
     this.message_n= this.club.club_Name;
 
+  }
+
 
   }
 
-}
+

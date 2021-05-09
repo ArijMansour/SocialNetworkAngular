@@ -279,7 +279,7 @@ p {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #000000;
+  color: #ffffff;
   letter-spacing: 1px;
 }
 
@@ -291,7 +291,7 @@ p {
 }
 
 #clubs .section-heading p {
-  color: #000000;
+  color: #ffffff;
   font-size: 17px;
   padding-right: 70px;
 }
@@ -994,4 +994,8 @@ fieldset
 
 #brdr{
   border: 3px black inset;
+  background-color: #b4dfef;
+}
+#loun_sous-titre{
+  color: #000000;
 }

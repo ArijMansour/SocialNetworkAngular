@@ -15,6 +15,7 @@ export class ShowClubsComponent implements OnInit {
   name: any;
 
 
+
   constructor(private service: ClubAddService) { }
 
   ngOnInit(): void {
@@ -30,9 +31,11 @@ export class ShowClubsComponent implements OnInit {
     let re = this.service.getClubById(id);
     re.subscribe((data) => this.club=data);
   }
+
   public supprimerClub(id: any) {
-    let voila = this.service.deleteClub(id);
-    voila.subscribe((data) => this.succesdelete=data);
+    this.service.deleteClub(id).subscribe(() => this.service.getAllClubs().subscribe((data) => {
+        this.clubs = data}));
   }
+
 
 }
