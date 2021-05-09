@@ -1,4 +1,112 @@
+
+<h1>Posts Dashboard : </h1>
+<hr>
+<hr>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th (click)="sort('id')">Post id&nbsp;<i class="fa fa-sort"></i></th>
+            <th>Post Title</th>
+            <th>Post Date</th>
+            <th>Post Description</th>
+            <th>Actions</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of posts | orderBy: key: reverse | paginate: {itemsPerPage:4,currentPage:pa};">
+            <td>{{p.post_Id}}</td>
+            <td>{{p.post_Title}}</td>
+            <td>{{p.post_Date}}</td>
+            <td>{{p.post_Description}}</td>
+
+            <td>
+                <button type="button" class="btn btn-primary" (click)="deleteRow(p.id)">Delete</button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger" (click)="update(p.post_Id)">Update</button>
+            </td>
+
+            
+            
+        </tr>
+    </tbody>
+    <pagination-controls (pageChange)="pa = $event" ></pagination-controls>
+</table>
+
 <div class="container">
+    <h1>If you want to add a post click here : 
+        <button type="button" class="btn btn-danger" (click)="addPost()">Add new Post</button>
+    </h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--<h1>Posts Dashboard :</h1>
+<hr>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th (click)="sort('post_Id')">Id&nbsp;<i class="fa fa-sort"></i></th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of posts | orderBy: key: reverse | paginate: {itemsPerPage:4,currentPage:pa};">
+            <td>{{p.post_Id}}</td>
+            <td>{{p.post_Title}}</td>
+            <td>{{p.post_Date}}</td>
+            <td>{{p.post_Description}}</td>
+            <td>
+                <button type="button" class="btn btn-primary" (click)="deleteRow(p.post_Id)">Delete</button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger" (click)="clickupdate()">Update</button>
+
+            </td>
+        </tr>
+    </tbody>
+    <pagination-controls (pageChange)="pa = $event" ></pagination-controls>
+</table>
+<p>{{message}}</p>
+
+
+<router-outlet></router-outlet>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container">
     <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Show All Posts :</a>
         <div class="body table-responsive">
@@ -10,7 +118,6 @@
                     <th scope="col">post_Date</th>
                     <th scope="col">post_Description</th>
                     <th scope="col">Action</th>
-                    <th scope="col">Member</th>
                     
                 </tr>
             </thead>
@@ -22,14 +129,6 @@
                     <td>{{p.post_Description}}</td>
                     <td><button (click)="blockDisabled = true" type="button" class="btn btn-danger">Delete</button></td>
                     
-                        
-                          <td><div *ngIf="!blockDisabled">
-                            <button (click)="blockDisabled = true" type="button" class="btn btn-warning">Block</button>
-                        </div></td>  
-                            
-                            <div *ngIf="blockDisabled">
-                                <button (click)="blockDisabled = false" type="button" class="btn btn-warning">Unblock</button>
-                            </div>
                         
                     
                     
@@ -43,8 +142,4 @@
         </li>
         
       </ul>
-</div>
-
-
-<p>ghodwa nkamelha ma 3ach najem tawa</p>
-
+</div>-->

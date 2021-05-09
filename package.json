@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -32,6 +32,9 @@
     "jquery": "^3.6.0",
     "jquery-ajax": "^2.1.4",
     "ng2-charts": "^2.4.2",
+    "ng2-order-pipe": "^0.1.5",
+    "ng2-search-filter": "^0.5.1",
+    "ngx-pagination": "^5.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "unirest": "^0.6.0",

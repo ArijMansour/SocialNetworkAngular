@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" [(ngModel)]="post.post_Title" placeholder="enter your title">
+    </div>
+    <div class="form-group">
+        <label>Date</label>
+        <input type="text" class="form-control" [(ngModel)]="post.Date">
+    </div>
+    <div class="form-group">
+        <label>What you want to say</label>
+        <input class="form-control form-control-lg" type="text" [(ngModel)]="post.Description" placeholder="lets write">
+        
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-danger" (click)="update()">Update</button>
+    </div>
+    
+</div>

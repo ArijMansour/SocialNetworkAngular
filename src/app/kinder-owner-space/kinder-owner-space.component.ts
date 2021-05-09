@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-kinder-owner-space',
@@ -11,5 +12,11 @@ export class KinderOwnerSpaceComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+
+
+
+
 
 }

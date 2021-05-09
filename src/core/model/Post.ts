@@ -1,7 +1,15 @@
 export class Post{
-    post_Title! : string ;
-    post_Id! : number;
-    post_Date! : Date;
-    post_Description! : string;    
+    id! : number;
+    Title! : string ;
+    Date! : Date;
+    Description! : string;   
+    
+    constructor(id:number, Title:string, Date : Date, Description:string){
+        this.id=id;
+        this.Title=Title;
+        this.Date=Date;
+        this.Description=Description;
+
+    }
 
 }

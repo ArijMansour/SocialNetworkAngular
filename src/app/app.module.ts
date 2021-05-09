@@ -19,6 +19,15 @@ import { ChartsModule } from 'ng2-charts';
 import { KinderOwnerSpaceComponent } from './kinder-owner-space/kinder-owner-space.component';
 import { ManagePostsComponent } from './manage-posts/manage-posts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Ng2SearchPipeModule } from 'ng2-search-filter' ;
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ReactiveFormsModule , FormsModule } from '@angular/forms';
+import { ManagePostsService } from './shared/manage-posts.service';
+import { GoodComponent } from './good/good.component';
+import { UpdatePostComponent } from './update-post/update-post.component';
+import { AddPostComponent } from './add-post/add-post.component';
+  
 
 @NgModule({
   declarations: [
@@ -36,6 +45,10 @@ import { HttpClientModule } from '@angular/common/http';
     ChartsComponent,
     KinderOwnerSpaceComponent,
     ManagePostsComponent,
+    GoodComponent,
+    UpdatePostComponent,
+    AddPostComponent,
+    
     
     
   ],
@@ -47,11 +60,18 @@ import { HttpClientModule } from '@angular/common/http';
     ChartsModule ,
     RouterModule ,
     HttpClientModule,
-    ChartsModule 
+    ChartsModule,
+    Ng2SearchPipeModule, 
+    Ng2OrderModule,
+    NgxPaginationModule,
+    ReactiveFormsModule,
+    FormsModule
+    
+
     
 
   ],
-  providers: [],
+  providers: [ManagePostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
