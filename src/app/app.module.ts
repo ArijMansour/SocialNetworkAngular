@@ -53,6 +53,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AdminkindergartenComponent } from './components/adminkindergarten/adminkindergarten.component';
 
 
 
@@ -70,6 +71,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     StatsComponent,
     ChartsComponent,
     ChatbotComponent,
+    AdminkindergartenComponent
     
   ],
   imports: [
