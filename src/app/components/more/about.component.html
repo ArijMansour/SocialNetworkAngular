@@ -12,7 +12,6 @@
                     <div class="primary-blue-button">
                         <a routerLink="stats" routerLinkActive='active' class="scroll-link" > ShowStats </a>
                     </div>
-        
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -44,16 +43,20 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item">
                     <div class="icon">
-                        <img src="assets/img/service_icon_04.png" alt="">
+                        <img src="assets/img/kidsclub.png" alt="">
                     </div>
                     <h4>Clubs</h4>
                     <div class="line-dec"></div>
                     <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent viverra, nunc et mollis fermentum.</p>
                     <div class="primary-blue-button">
-                        <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
+                  <li>  <a [routerLink]="['clubs']"  routerLinkActive='active'  class="scroll-link"  data-id="clubs">Show clubs</a> </li>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+<router-outlet></router-outlet>
+

@@ -15,9 +15,18 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { ChartsComponent } from './components/charts/charts.component';
 import { ChartsModule } from 'ng2-charts';
+
+import { ClubsComponent } from './components/clubs/clubs.component';
+import { AddClubComponent } from './components/add-club/add-club.component';
+import { ParentSpaceComponent } from './components/parent-space/parent-space.component';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import {ClubAddService} from './components/club-add.service';
+import { ShowClubsComponent } from './components/show-clubs/show-clubs.component';
+import { ModifyClubComponent } from './components/modify-club/modify-club.component';
+
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { NbThemeModule, NbChatModule } from '@nebular/theme';
-import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CdkTreeModule } from '@angular/cdk/tree';
@@ -57,6 +66,7 @@ import { AdminkindergartenComponent } from './components/adminkindergarten/admin
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,9 +80,17 @@ import { AdminkindergartenComponent } from './components/adminkindergarten/admin
     NotfoundComponent,
     StatsComponent,
     ChartsComponent,
+
+    ClubsComponent,
+    AddClubComponent,
+    ParentSpaceComponent,
+    ShowClubsComponent,
+    ModifyClubComponent,
+
     ChatbotComponent,
     AdminkindergartenComponent
     
+
   ],
   imports: [
     BrowserModule,
@@ -80,12 +98,17 @@ import { AdminkindergartenComponent } from './components/adminkindergarten/admin
     NgbModule ,
     RouterModule,
     ChartsModule ,
+
+    ChartsModule,
+    HttpClientModule,
+    FormsModule,
+
     RouterModule ,
     ChartsModule ,
     NbThemeModule.forRoot(),
     NbChatModule ,
-    FormsModule ,
-    ChartsModule,
+ 
+   
     BrowserAnimationsModule ,
     MatToolbarModule ,
     MatSidenavModule ,
@@ -124,7 +147,7 @@ import { AdminkindergartenComponent } from './components/adminkindergarten/admin
     MatRadioModule ,
     MatTooltipModule 
   ],
-  providers: [],
+  providers: [ClubAddService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
