@@ -15,14 +15,27 @@ import {ParentSpaceComponent} from './components/parent-space/parent-space.compo
 import {ShowClubsComponent} from './components/show-clubs/show-clubs.component';
 import {ModifyClubComponent} from './components/modify-club/modify-club.component';
 
-const routes: Routes = [//{path:'',redirectTo: 'show_clubs',pathMatch:'full'},
-{path:'kindergardens',component:PortfolioComponent},
-{path:'more',component:AboutComponent, children:[{path:'clubs',component:ClubsComponent}]},
-{path:'stats',component:StatsComponent },
-{path:'blog',component:BlogComponent},
-{path:'contactUs',component:ContactComponent},
-{path:'sign-in',component:LoginComponent},
-  {path:'parent_space',component:ParentSpaceComponent,
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
+
+import { KinderOwnerSpaceComponent } from './kinder-owner-space/kinder-owner-space.component';
+import { ManagePostsComponent } from './manage-posts/manage-posts.component';
+
+
+const routes: Routes = [{path:'',component:HomeComponent} ,
+{path:'kindergardens',component:PortfolioComponent} ,
+{path:'more',component:AboutComponent, children:[{path:'clubs',component:ClubsComponent}]} ,
+{path:'stats',component:StatsComponent } ,
+{path:'blog',component:BlogComponent} ,
+{path:'contactUs',component:ContactComponent , children:[
+  { path:'chatbot' , component:ChatbotComponent
+
+}] } ,
+{path:'sign-in',component:LoginComponent} ,
+{path:'kindergartenOwner' , component: KinderOwnerSpaceComponent , children:[
+  {path:'managePosts' , component: ManagePostsComponent},   
+]},
+  
+   {path:'parent_space',component:ParentSpaceComponent,
     children:[
       {path:'show_clubs',component:ShowClubsComponent,
           children:[
@@ -32,7 +45,7 @@ const routes: Routes = [//{path:'',redirectTo: 'show_clubs',pathMatch:'full'},
       }
       ]
   },
-  {path:'**',component:NotfoundComponent}
+{path:'**',component:NotfoundComponent} 
 ];
 
 @NgModule({
