@@ -23,7 +23,7 @@
             <div>
               <br>
               <br>
-              <router-outlet></router-outlet>
+
             </div>
              <label>{{succesdelete}}</label>
             <form>
@@ -31,6 +31,7 @@
                 <legend class="text-center"><h3>home clubs</h3><span class="req"><br><small>
                                 </small></span></legend>
                 <div *ngFor="let club of clubs">
+
                   <div id="brdr">
                   <div class="form-group">
                     <h4> N°: {{club.club_Id}}</h4>
@@ -50,8 +51,9 @@
                   <br>
                   <div id="brdr">
                     <button class="btn btn-danger btn-xs" (click)="supprimerClub(club.club_Id)">Delete</button>
-                    <button routerLink="modify_club" class="btn btn-danger btn-xs" >Delete</button>
+                    <button class="btn btn-danger btn-xs" routerLink="modify_club" >Delete</button>
                 </div>
+                    <div>  <router-outlet></router-outlet></div>
                 </div>
                   <br>
                   <br>

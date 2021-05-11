@@ -15,7 +15,7 @@ import {ParentSpaceComponent} from './components/parent-space/parent-space.compo
 import {ShowClubsComponent} from './components/show-clubs/show-clubs.component';
 import {ModifyClubComponent} from './components/modify-club/modify-club.component';
 
-const routes: Routes = [{path:'',redirectTo: 'show_clubs',pathMatch:'full'},
+const routes: Routes = [//{path:'',redirectTo: 'show_clubs',pathMatch:'full'},
 {path:'kindergardens',component:PortfolioComponent},
 {path:'more',component:AboutComponent, children:[{path:'clubs',component:ClubsComponent}]},
 {path:'stats',component:StatsComponent },

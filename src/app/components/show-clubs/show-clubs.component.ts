@@ -13,6 +13,8 @@ export class ShowClubsComponent implements OnInit {
   club: any;
   succesdelete: any;
   name: any;
+  msg:any;
+  i:any;
 
 
 
@@ -36,6 +38,8 @@ export class ShowClubsComponent implements OnInit {
     this.service.deleteClub(id).subscribe(() => this.service.getAllClubs().subscribe((data) => {
         this.clubs = data}));
   }
+
+
 
 
 }

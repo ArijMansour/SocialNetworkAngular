@@ -1,7 +1,7 @@
 export class Club{
 
 
-  
+
   constructor(
     public club_Id: string,
     public club_Name: string,
